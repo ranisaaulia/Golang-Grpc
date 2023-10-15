@@ -1,0 +1,47 @@
+syntax = "proto3";
+package userProto;
+option go_package = "./app/master-data/user/user_proto";
+import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
+
+
+service UserService {
+  rpc GetAllUser(GetAllUserRequest) returns (GetAllUserResponse) {
+    option (google.api.http) = {
+      get: "/user"
+    };
+  }
+  rpc GetOneUser(GetOneUserRequest) returns (GetOneUserResponse) {
+    option (google.api.http) = {
+      get: "/user/{username}"
+    };
+  }
+}
+message GetAllUserRequest {
+  int64 skip = 1;
+  int64 take = 2;
+}
+message GetOneUserRequest {
+  string username = 1;
+}
+message GetAllUserResponse {
+  bool isError = 1;
+  string errMessage = 2;
+  repeated UserItem data = 3;
+}
+message GetOneUserResponse {
+  bool isError = 1;
+  string errMessage = 2;
+  UserItem data = 3;
+}
+message UserItem {
+  int64 ID = 1;
+  string username = 2;
+  string password = 3;
+  string fullname = 4;
+  bool is_active = 5;
+  int64 created_by = 6;
+  google.protobuf.Timestamp created_date = 7;
+  int64 modified_by = 8;
+  google.protobuf.Timestamp modified_date = 9;
+}
