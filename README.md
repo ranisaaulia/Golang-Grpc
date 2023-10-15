@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # golang-grpc
 Golang gRPC skeleton with SQLC
 
@@ -13,3 +14,7 @@ will generate the sqlc generated file for example:
 `bash cmd.sh --cmd=proto --path=pathfolder`
 will generate the protobuf generated file for example:
 `bash cmd.sh --cmd=sqlc --path=app/master-data/user` will place the generated file to `app/master-data/user/proto`
+=======
+# Golang-Grpc
+Proyek ini adalah contoh penggunaan gRPC (Google Remote Procedure Call) dalam bahasa pemrograman Golang (Go) untuk mengelola peran pengguna dan transaksi dalam aplikasi kami.
+>>>>>>> 665bb0c87ecae06b916c6d01086a082e4b279dc0
