@@ -16,4 +16,4 @@ will generate the protobuf generated file for example:
 `bash cmd.sh --cmd=sqlc --path=app/master-data/user` will place the generated file to `app/master-data/user/proto`
 =======
 # Golang-Grpc
-Project ini adalah contoh penggunaan gRPC (Google Remote Procedure Call) dalam bahasa pemrograman Golang (Go) untuk mengelola peran pengguna dan transaksi dalam aplikasi kami.
+Project ini adalah contoh penggunaan gRPC (Google Remote Procedure Call) dalam bahasa pemrograman Golang (Go) untuk mengelola peran pengguna dan transaksi dalam aplikasi.
